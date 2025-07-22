@@ -24,7 +24,7 @@ await connectCloudinary()
 // 2) CORS SETUP: allow localhost + your Vercel UI origin
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://greencart-deploy-uiov.vercel.app'
+  'https://grocery-app-pink.vercel.app'
 ]
 const corsOptions = {
   origin: allowedOrigins,
