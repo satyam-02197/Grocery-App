@@ -44,8 +44,8 @@ app.post(
 )
 
 // 5) BODY + COOKIE PARSING
-app.use(express.json())
-app.use(cookieParser())
+app.use(express.json())  // lets your routes read req.body as JSON
+app.use(cookieParser())  // lets your routes read req.cookies as JSON
 
 // 6) HEALTHCHECK
 app.get('/', (req, res) => {
@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 })
 
 // 7) MOUNT YOUR ROUTES
-app.use('/api/user',    userRouter)
+app.use('/api/user',    userRouter) 
 app.use('/api/seller',  sellerRouter)
 app.use('/api/product', productRouter)
 app.use('/api/cart',    cartRouter)
